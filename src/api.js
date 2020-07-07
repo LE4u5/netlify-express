@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const router = express.Router();
 
-app.use(cors());
+app.use(cors({origin: '*'}));
 router.get('/', (req,res) => {
     res.json( PRODUCTS );
 });
