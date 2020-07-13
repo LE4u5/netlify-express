@@ -3,7 +3,7 @@ const serverless = require('serverless-http');
 const PRODUCTS = require('./products');
 const MongoClient = require('mongodb').MongoClient;
 
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://admin:Td061486%23@le4u5-1.cjoeh.mongodb.net/test?authSource=admin&replicaSet=atlas-uvu5ec-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true';
 const dbname = 'GlossedByK';
 
 const mongoHandler = async () => {
