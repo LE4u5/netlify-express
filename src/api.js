@@ -1,6 +1,5 @@
 const express = require('express');
 const serverless = require('serverless-http');
-const PRODUCTS = require('./products');
 const MongoClient = require('mongodb').MongoClient;
 
 const url = 'mongodb+srv://admin:Td061486%23@le4u5-1.cjoeh.mongodb.net/test?authSource=admin&replicaSet=atlas-uvu5ec-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true';
@@ -34,7 +33,7 @@ app.use((req, res, next) => {
 
 router.get('/', async (req, res) => {
     data = await mongoHandler();
-    console.log('Mongodb data', data);
+    console.log('Retrieved data');
     res.json(data);
 });
 
