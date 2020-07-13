@@ -1,8 +1,8 @@
 const express = require('express');
 const serverless = require('serverless-http');
 const MongoClient = require('mongodb').MongoClient;
-
-const url = 'mongodb+srv://admin:Td061486%23@le4u5-1.cjoeh.mongodb.net/test?authSource=admin&replicaSet=atlas-uvu5ec-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true';
+const {API_UN, API_PASS, API_URL} = process.env;
+const url = `mongodb+srv://${API_UN}:${API_PASS}${API_URL}`;
 const dbname = 'GlossedByK';
 
 const mongoHandler = async () => {
